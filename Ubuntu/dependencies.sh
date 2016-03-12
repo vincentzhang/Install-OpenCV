@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "--- Removing any pre-installed ffmpeg and x264"
-sudo apt-get -qq remove ffmpeg x264 libx264-dev
+apt-get -qq remove ffmpeg x264 libx264-dev
 
 function install_dependency {
     echo "--- Installing dependency: $1"
-    sudo apt-get -y install $1
+    apt-get -y install $1
 }
 
 install_dependency libopencv-dev
@@ -39,5 +39,4 @@ install_dependency libvorbis-dev
 install_dependency libxvidcore-dev
 install_dependency x264
 install_dependency v4l-utils
-#install_dependency ffmpeg
 install_dependency unzip
